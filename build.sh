@@ -11,9 +11,9 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y \
-    upower
-    wireshark
-    nmap
+    upower \
+    wireshark \
+    nmap \
 
 # Use a COPR Example:
 #
