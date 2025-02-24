@@ -27,3 +27,4 @@ dnf5 install -y https://dl4jz3rbrsfum.cloudfront.net/software/PPL_64bit_v1.4.1.r
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+systemctl enable pwrstatd.service
