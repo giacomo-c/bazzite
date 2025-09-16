@@ -13,6 +13,7 @@ set -ouex pipefail
 dnf5 install -y \
     wireshark \
     nmap \
+    kvantum \
 
 # install powerpanel for CyberPower UPS
 dnf5 install -y https://dl4jz3rbrsfum.cloudfront.net/software/PPL_64bit_v1.4.1.rpm
