@@ -33,6 +33,11 @@ ln -rs /usr/bin/rclone /usr/bin/rclonefs
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+# Clean-up
+rm -rf /tmp/* || true
+find /var/* -maxdepth 0 -type d \! -name cache -exec rm -fr {} \;
+find /var/cache/* -maxdepth 0 -type d \! -name libdnf5 \! -name rpm-ostree -exec rm -fr {} \;
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
