@@ -30,7 +30,7 @@ ln -rs /usr/bin/rclone /usr/bin/rclonefs
 # Install Heroic from Github release
 # HEROIC_GH_URL="https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest"
 HEROIC_RPM_URL="curl -sSL https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest \
-    | jq -r '.assets[] | select(.name | endswith(".rpm")) | .browser_download_url'"
+    | jq -r '.assets[] | select(.name | endswith(.rpm)) | .browser_download_url'"
 
 if [[ -z "HEROIC_RPM_URL" ]]; then
     echo "Could not find the Heroic .rpm in latest releases." >&2
