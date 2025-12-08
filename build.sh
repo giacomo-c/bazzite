@@ -37,7 +37,7 @@ if [[ -z "HEROIC_RPM_URL" ]]; then
     exit 1
 fi
 
-dnf install -y "${$HEROIC_RPM_URL}"
+dnf install -y "$HEROIC_RPM_URL"
 
 
 # Use a COPR Example:
