@@ -27,19 +27,6 @@ dnf install -y https://downloads.rclone.org/rclone-current-linux-amd64.rpm
 ln -rs /usr/bin/rclone /sbin/mount.rclone
 ln -rs /usr/bin/rclone /usr/bin/rclonefs
 
-# Install Heroic from Github release
-# HEROIC_GH_URL="https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest"
-HEROIC_RPM_URL="$(curl -sSL https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest \
-    | jq -r '.assets[] | select(.name | endswith(".rpm")) | .browser_download_url')"
-
-if [[ -z "HEROIC_RPM_URL" ]]; then
-    echo "Could not find the Heroic .rpm in latest releases." >&2
-    exit 1
-fi
-
-dnf install -y "$HEROIC_RPM_URL"
-
-
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
