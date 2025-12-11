@@ -17,7 +17,7 @@ dnf5 install -y \
     qt6-qtwebsockets-devel \
 
 # install powerpanel for CyberPower UPS
-dnf5 install -y https://dl4jz3rbrsfum.cloudfront.net/software/PPL_64bit_v1.4.1.rpm
+# dnf5 install -y https://dl4jz3rbrsfum.cloudfront.net/software/PPL_64bit_v1.4.1.rpm
 
 # install latest rclone
 dnf remove -y rclone
