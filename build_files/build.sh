@@ -45,5 +45,5 @@ find /var/cache/* -maxdepth 0 -type d \! -name libdnf5 \! -name rpm-ostree -exec
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-systemctl enable spacenavd.socket
+# systemctl enable spacenavd.socket
 # systemctl enable pwrstatd.service
