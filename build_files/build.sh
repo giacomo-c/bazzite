@@ -15,9 +15,9 @@ dnf5 install -y \
     nmap \
     kvantum \
     qt6-qtwebsockets-devel \
-    # spacenavd \
-    # spnavcfg \
-    # libspnav
+    spacenavd \
+    spnavcfg \
+    libspnav
 
 # install powerpanel for CyberPower UPS
 # dnf5 install -y https://dl4jz3rbrsfum.cloudfront.net/software/PPL_64bit_v1.4.1.rpm
@@ -45,4 +45,5 @@ find /var/cache/* -maxdepth 0 -type d \! -name libdnf5 \! -name rpm-ostree -exec
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+systemctl enable spacenavd.socket
 # systemctl enable pwrstatd.service
