@@ -31,6 +31,11 @@ dnf install -y https://downloads.rclone.org/rclone-current-linux-amd64.rpm
 ln -rs /usr/bin/rclone /sbin/mount.rclone
 ln -rs /usr/bin/rclone /usr/bin/rclonefs
 
+# Fix Distrobox until 2.0 release
+dnf remove -y distrobox
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/legacy/install | sudo sh
+
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
