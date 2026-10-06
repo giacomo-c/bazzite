@@ -32,8 +32,8 @@ ln -rs /usr/bin/rclone /sbin/mount.rclone
 ln -rs /usr/bin/rclone /usr/bin/rclonefs
 
 # Fix Distrobox until 2.0 release
-dnf remove -y distrobox
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/legacy/install | sh
+# dnf remove -y distrobox
+# curl -s https://raw.githubusercontent.com/89luca89/distrobox/legacy/install | sh
 
 
 # Use a COPR Example:
